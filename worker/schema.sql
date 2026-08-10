@@ -1,4 +1,4 @@
--- Shalom Tours and Travels car rental schema
+-- Shalom Tours and Travels car rental schema built on 11-Aug
 
 CREATE TABLE IF NOT EXISTS users (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
