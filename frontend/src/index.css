@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1, h2, h3, h4 {
+  font-family: theme('fontFamily.display');
+}
+
+input, select, textarea {
+  background-color: rgba(0, 0, 0, 0.35);
+  color: #F5F1E8;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #A39C8C;
+}
+
+select option {
+  color: #121212;
+}

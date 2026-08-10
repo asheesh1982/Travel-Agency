@@ -1,0 +1,12 @@
+name = "car-rental-api"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "car-rental-db"
+database_id = "f4b4aa88-6c88-4ef8-a22e-2041b348bbe2"
+
+# Set these as secrets, not vars:
+#   wrangler secret put JWT_SECRET
+#   wrangler secret put ADMIN_SIGNUP_CODE
