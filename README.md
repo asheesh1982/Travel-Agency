@@ -2,7 +2,7 @@
 
 Full-stack car rental app: React frontend, Cloudflare Worker API (Hono), Cloudflare D1 database. Deploys entirely on Cloudflare; source lives on GitHub.
 
-## Structure 1
+## Structure 11-Aug
 
 ```
 car-rental/
