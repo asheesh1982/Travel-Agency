@@ -8,7 +8,7 @@ export default function AdminLayout() {
 
   return (
     <div className="min-h-screen flex">
-      <aside className="w-56 bg-surface border-r border-gold/20 text-cream p-6 space-y-4 shrink-0">
+      <aside className="w-56 bg-surface border-r border-gold/20 text-ink p-6 space-y-4 shrink-0">
         <div className="flex items-center gap-2 mb-8">
           <img src="/logo-icon.jpg" alt="" className="h-8 w-8 rounded-full object-cover border border-gold/40" />
           <p className="font-display text-base leading-tight">{siteConfig.name}</p>
@@ -28,7 +28,7 @@ export default function AdminLayout() {
           </button>
         </nav>
       </aside>
-      <main className="flex-1 bg-ink p-8">
+      <main className="flex-1 bg-cream p-8">
         <Outlet />
       </main>
     </div>

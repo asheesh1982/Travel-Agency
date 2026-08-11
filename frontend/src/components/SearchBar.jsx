@@ -19,27 +19,27 @@ export default function SearchBar() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-surface border border-gold/25 rounded-2xl shadow-xl shadow-black/40 p-3 flex flex-col md:flex-row gap-2 max-w-3xl w-full"
+      className="bg-surface border border-gold/25 rounded-2xl shadow-xl shadow-black/10 p-3 flex flex-col md:flex-row gap-2 max-w-3xl w-full"
     >
       <input
         value={location}
         onChange={(e) => setLocation(e.target.value)}
         placeholder="Pickup city"
-        className="flex-1 px-4 py-3 rounded-xl outline-none border border-white/10"
+        className="flex-1 px-4 py-3 rounded-xl outline-none border border-black/10"
       />
       <input
         type="date"
         value={start}
         onChange={(e) => setStart(e.target.value)}
-        className="px-4 py-3 rounded-xl outline-none border border-white/10"
+        className="px-4 py-3 rounded-xl outline-none border border-black/10"
       />
       <input
         type="date"
         value={end}
         onChange={(e) => setEnd(e.target.value)}
-        className="px-4 py-3 rounded-xl outline-none border border-white/10"
+        className="px-4 py-3 rounded-xl outline-none border border-black/10"
       />
-      <button className="bg-gold text-ink px-6 py-3 rounded-xl font-semibold hover:bg-gold-dark transition">
+      <button className="bg-coral text-white px-6 py-3 rounded-xl font-semibold hover:bg-coral-dark transition">
         Search
       </button>
     </form>

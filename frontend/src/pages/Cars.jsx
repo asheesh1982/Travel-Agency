@@ -36,7 +36,7 @@ export default function Cars() {
         <select
           value={filters.category}
           onChange={(e) => updateFilter('category', e.target.value)}
-          className="px-4 py-2 rounded-full border border-white/10 bg-surface"
+          className="px-4 py-2 rounded-full border border-black/10 bg-surface"
         >
           <option value="">All categories</option>
           <option value="economy">Economy</option>
@@ -47,7 +47,7 @@ export default function Cars() {
         <select
           value={filters.transmission}
           onChange={(e) => updateFilter('transmission', e.target.value)}
-          className="px-4 py-2 rounded-full border border-white/10 bg-surface"
+          className="px-4 py-2 rounded-full border border-black/10 bg-surface"
         >
           <option value="">Any transmission</option>
           <option value="automatic">Automatic</option>
@@ -56,7 +56,7 @@ export default function Cars() {
         <select
           value={filters.maxPrice}
           onChange={(e) => updateFilter('maxPrice', e.target.value)}
-          className="px-4 py-2 rounded-full border border-white/10 bg-surface"
+          className="px-4 py-2 rounded-full border border-black/10 bg-surface"
         >
           <option value="">Any price</option>
           <option value="50">Under $50/day</option>

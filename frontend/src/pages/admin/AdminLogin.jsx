@@ -25,7 +25,7 @@ export default function AdminLogin() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-ink px-4">
+    <div className="min-h-screen flex items-center justify-center bg-cream px-4">
       <form onSubmit={handleSubmit} className="bg-surface rounded-2xl p-8 w-full max-w-sm space-y-4">
         <h1 className="font-display text-2xl">Admin login</h1>
         <input
@@ -33,7 +33,7 @@ export default function AdminLogin() {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full px-4 py-2 rounded-xl border border-white/10"
+          className="w-full px-4 py-2 rounded-xl border border-black/10"
           required
         />
         <input
@@ -41,11 +41,11 @@ export default function AdminLogin() {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full px-4 py-2 rounded-xl border border-white/10"
+          className="w-full px-4 py-2 rounded-xl border border-black/10"
           required
         />
         {error && <p className="text-red-400 text-sm">{error}</p>}
-        <button className="w-full bg-gold text-ink py-3 rounded-xl font-semibold hover:bg-gold-dark transition">
+        <button className="w-full bg-coral text-white py-3 rounded-xl font-semibold hover:bg-coral-dark transition">
           Log in
         </button>
       </form>

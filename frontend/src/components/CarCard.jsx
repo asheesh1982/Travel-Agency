@@ -4,9 +4,9 @@ export default function CarCard({ car }) {
   return (
     <Link
       to={`/cars/${car.id}`}
-      className="group block bg-surface rounded-2xl overflow-hidden border border-white/10 hover:border-gold/40 hover:shadow-lg hover:shadow-gold/5 transition"
+      className="group block bg-surface rounded-2xl overflow-hidden border border-black/10 hover:border-gold/50 hover:shadow-lg hover:shadow-gold/10 transition"
     >
-      <div className="aspect-[4/3] bg-black/30 overflow-hidden">
+      <div className="aspect-[4/3] bg-gold/10 overflow-hidden">
         {car.image_url ? (
           <img
             src={car.image_url}
@@ -21,7 +21,7 @@ export default function CarCard({ car }) {
       </div>
       <div className="p-4">
         <div className="flex items-center justify-between gap-2">
-          <h3 className="font-display text-lg text-cream">{car.name}</h3>
+          <h3 className="font-display text-lg text-ink">{car.name}</h3>
           <span className="text-xs uppercase tracking-wide bg-gold/15 text-gold border border-gold/30 px-2 py-1 rounded-full whitespace-nowrap">
             {car.category}
           </span>

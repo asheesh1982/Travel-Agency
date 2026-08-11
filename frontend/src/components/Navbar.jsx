@@ -8,8 +8,8 @@ export default function Navbar() {
   const linkClass = ({ isActive }) => (isActive ? 'text-gold' : 'hover:text-gold transition');
 
   return (
-    <header className="sticky top-0 z-30 bg-ink/95 backdrop-blur border-b border-gold/20">
-      <div className="hidden md:flex justify-end gap-6 max-w-6xl mx-auto px-4 py-1.5 text-xs text-muted border-b border-white/5">
+    <header className="sticky top-0 z-30 bg-cream/95 backdrop-blur border-b border-gold/20">
+      <div className="hidden md:flex justify-end gap-6 max-w-6xl mx-auto px-4 py-1.5 text-xs text-muted border-b border-black/5">
         <a href={`tel:${siteConfig.phone}`} className="hover:text-gold transition">
           {siteConfig.phone}
         </a>
@@ -42,7 +42,7 @@ export default function Navbar() {
               </NavLink>
               <Link
                 to="/signup"
-                className="bg-gold text-ink px-4 py-2 rounded-full font-semibold hover:bg-gold-dark transition"
+                className="bg-coral text-white px-4 py-2 rounded-full font-semibold hover:bg-coral-dark transition"
               >
                 Sign up
               </Link>

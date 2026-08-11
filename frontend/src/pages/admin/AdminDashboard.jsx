@@ -23,7 +23,7 @@ export default function AdminDashboard() {
       <h1 className="font-display text-2xl mb-6">Dashboard</h1>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         {cards.map((c) => (
-          <div key={c.label} className="bg-surface rounded-2xl p-4 border border-white/10">
+          <div key={c.label} className="bg-surface rounded-2xl p-4 border border-black/10">
             <p className="text-xs text-muted">{c.label}</p>
             <p className="font-display text-2xl text-gold mt-1">{c.value}</p>
           </div>

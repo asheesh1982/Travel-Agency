@@ -29,7 +29,7 @@ export default function Account() {
       ) : (
         <div className="space-y-4">
           {bookings.map((b) => (
-            <div key={b.id} className="bg-surface rounded-2xl p-4 border border-white/10 flex items-center justify-between">
+            <div key={b.id} className="bg-surface rounded-2xl p-4 border border-black/10 flex items-center justify-between">
               <div>
                 <p className="font-display">{b.car_name}</p>
                 <p className="text-sm text-muted">

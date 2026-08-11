@@ -50,27 +50,27 @@ export default function AdminCars() {
   return (
     <div>
       <h1 className="font-display text-2xl mb-6">Fleet</h1>
-      <form onSubmit={handleSubmit} className="bg-surface rounded-2xl p-6 border border-white/10 grid grid-cols-2 gap-3 mb-8">
-        <input placeholder="Name" value={form.name} onChange={(e) => updateField('name', e.target.value)} className="px-3 py-2 rounded-lg border border-white/10" required />
-        <input placeholder="Make" value={form.make} onChange={(e) => updateField('make', e.target.value)} className="px-3 py-2 rounded-lg border border-white/10" required />
-        <input placeholder="Model" value={form.model} onChange={(e) => updateField('model', e.target.value)} className="px-3 py-2 rounded-lg border border-white/10" required />
-        <input type="number" placeholder="Year" value={form.year} onChange={(e) => updateField('year', Number(e.target.value))} className="px-3 py-2 rounded-lg border border-white/10" required />
-        <select value={form.category} onChange={(e) => updateField('category', e.target.value)} className="px-3 py-2 rounded-lg border border-white/10">
+      <form onSubmit={handleSubmit} className="bg-surface rounded-2xl p-6 border border-black/10 grid grid-cols-2 gap-3 mb-8">
+        <input placeholder="Name" value={form.name} onChange={(e) => updateField('name', e.target.value)} className="px-3 py-2 rounded-lg border border-black/10" required />
+        <input placeholder="Make" value={form.make} onChange={(e) => updateField('make', e.target.value)} className="px-3 py-2 rounded-lg border border-black/10" required />
+        <input placeholder="Model" value={form.model} onChange={(e) => updateField('model', e.target.value)} className="px-3 py-2 rounded-lg border border-black/10" required />
+        <input type="number" placeholder="Year" value={form.year} onChange={(e) => updateField('year', Number(e.target.value))} className="px-3 py-2 rounded-lg border border-black/10" required />
+        <select value={form.category} onChange={(e) => updateField('category', e.target.value)} className="px-3 py-2 rounded-lg border border-black/10">
           <option value="economy">Economy</option>
           <option value="suv">SUV</option>
           <option value="luxury">Luxury</option>
           <option value="van">Van</option>
         </select>
-        <select value={form.transmission} onChange={(e) => updateField('transmission', e.target.value)} className="px-3 py-2 rounded-lg border border-white/10">
+        <select value={form.transmission} onChange={(e) => updateField('transmission', e.target.value)} className="px-3 py-2 rounded-lg border border-black/10">
           <option value="automatic">Automatic</option>
           <option value="manual">Manual</option>
         </select>
-        <input type="number" placeholder="Seats" value={form.seats} onChange={(e) => updateField('seats', Number(e.target.value))} className="px-3 py-2 rounded-lg border border-white/10" required />
-        <input type="number" placeholder="Price / day" value={form.price_per_day} onChange={(e) => updateField('price_per_day', Number(e.target.value))} className="px-3 py-2 rounded-lg border border-white/10" required />
-        <input placeholder="Image URL (optional)" value={form.image_url || ''} onChange={(e) => updateField('image_url', e.target.value)} className="px-3 py-2 rounded-lg border border-white/10 col-span-2" />
-        <textarea placeholder="Description" value={form.description || ''} onChange={(e) => updateField('description', e.target.value)} className="px-3 py-2 rounded-lg border border-white/10 col-span-2" />
+        <input type="number" placeholder="Seats" value={form.seats} onChange={(e) => updateField('seats', Number(e.target.value))} className="px-3 py-2 rounded-lg border border-black/10" required />
+        <input type="number" placeholder="Price / day" value={form.price_per_day} onChange={(e) => updateField('price_per_day', Number(e.target.value))} className="px-3 py-2 rounded-lg border border-black/10" required />
+        <input placeholder="Image URL (optional)" value={form.image_url || ''} onChange={(e) => updateField('image_url', e.target.value)} className="px-3 py-2 rounded-lg border border-black/10 col-span-2" />
+        <textarea placeholder="Description" value={form.description || ''} onChange={(e) => updateField('description', e.target.value)} className="px-3 py-2 rounded-lg border border-black/10 col-span-2" />
         <div className="col-span-2 flex gap-3">
-          <button className="bg-gold text-ink px-6 py-2 rounded-full font-semibold">
+          <button className="bg-coral text-white px-6 py-2 rounded-full font-semibold">
             {editingId ? 'Save changes' : 'Add car'}
           </button>
           {editingId && (
@@ -80,7 +80,7 @@ export default function AdminCars() {
                 setForm(empty);
                 setEditingId(null);
               }}
-              className="px-6 py-2 rounded-full border border-white/10"
+              className="px-6 py-2 rounded-full border border-black/10"
             >
               Cancel
             </button>
@@ -90,7 +90,7 @@ export default function AdminCars() {
 
       <div className="space-y-3">
         {cars.map((car) => (
-          <div key={car.id} className="bg-surface rounded-2xl p-4 border border-white/10 flex items-center justify-between">
+          <div key={car.id} className="bg-surface rounded-2xl p-4 border border-black/10 flex items-center justify-between">
             <div>
               <p className="font-display">{car.name}</p>
               <p className="text-sm text-muted">

@@ -14,13 +14,13 @@ export default function Footer() {
         <div className="text-sm text-muted space-y-1">
           <p>
             Call us:{' '}
-            <a href={`tel:${siteConfig.phone}`} className="text-cream hover:text-gold transition">
+            <a href={`tel:${siteConfig.phone}`} className="text-ink hover:text-gold transition">
               {siteConfig.phone}
             </a>
           </p>
           <p>
             Email:{' '}
-            <a href={`mailto:${siteConfig.email}`} className="text-cream hover:text-gold transition">
+            <a href={`mailto:${siteConfig.email}`} className="text-ink hover:text-gold transition">
               {siteConfig.email}
             </a>
           </p>

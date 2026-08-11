@@ -19,7 +19,7 @@ export default function AdminBookings() {
       <h1 className="font-display text-2xl mb-6">Bookings</h1>
       <div className="space-y-3">
         {bookings.map((b) => (
-          <div key={b.id} className="bg-surface rounded-2xl p-4 border border-white/10 flex items-center justify-between">
+          <div key={b.id} className="bg-surface rounded-2xl p-4 border border-black/10 flex items-center justify-between">
             <div>
               <p className="font-display">{b.car_name}</p>
               <p className="text-sm text-muted">
@@ -34,7 +34,7 @@ export default function AdminBookings() {
               <select
                 value={b.status}
                 onChange={(e) => setStatus(b.id, e.target.value)}
-                className="px-3 py-1 rounded-full border border-white/10 text-sm capitalize"
+                className="px-3 py-1 rounded-full border border-black/10 text-sm capitalize"
               >
                 <option value="confirmed">Confirmed</option>
                 <option value="completed">Completed</option>

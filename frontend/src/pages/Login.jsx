@@ -29,7 +29,7 @@ export default function Login() {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full px-4 py-2 rounded-xl border border-white/10"
+          className="w-full px-4 py-2 rounded-xl border border-black/10"
           required
         />
         <input
@@ -37,11 +37,11 @@ export default function Login() {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full px-4 py-2 rounded-xl border border-white/10"
+          className="w-full px-4 py-2 rounded-xl border border-black/10"
           required
         />
         {error && <p className="text-red-400 text-sm">{error}</p>}
-        <button className="w-full bg-gold text-ink py-3 rounded-xl font-semibold hover:bg-gold-dark transition">
+        <button className="w-full bg-coral text-white py-3 rounded-xl font-semibold hover:bg-coral-dark transition">
           Log in
         </button>
       </form>

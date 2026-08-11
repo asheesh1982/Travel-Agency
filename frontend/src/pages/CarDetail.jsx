@@ -14,7 +14,7 @@ export default function CarDetail() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-8">
-      <div className="aspect-[4/3] rounded-2xl bg-black/30 overflow-hidden">
+      <div className="aspect-[4/3] rounded-2xl bg-gold/10 overflow-hidden">
         {car.image_url ? (
           <img src={car.image_url} alt={car.name} className="w-full h-full object-cover" />
         ) : (
@@ -35,7 +35,7 @@ export default function CarDetail() {
         </p>
         <Link
           to={`/booking/${car.id}`}
-          className="inline-block bg-gold text-ink px-6 py-3 rounded-full font-semibold hover:bg-gold-dark transition"
+          className="inline-block bg-coral text-white px-6 py-3 rounded-full font-semibold hover:bg-coral-dark transition"
         >
           Book this car
         </Link>
