@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { api } from '../../lib/api.js';
+import { siteConfig } from '../../config/site.js';
 
 export default function AdminDashboard() {
   const [stats, setStats] = useState(null);
@@ -13,7 +14,7 @@ export default function AdminDashboard() {
   const cards = [
     { label: 'Total cars', value: stats.totalCars },
     { label: 'Total bookings', value: stats.totalBookings },
-    { label: 'Revenue', value: `$${stats.revenue}` },
+    { label: 'Revenue', value: `${siteConfig.currency} ${stats.revenue}` },
     { label: "Today's pickups", value: stats.todayPickups },
     { label: "Today's returns", value: stats.todayReturns },
   ];

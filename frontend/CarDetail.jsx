@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { api } from '../lib/api.js';
+import { siteConfig } from '../config/site.js';
 
 export default function CarDetail() {
   const { id } = useParams();
@@ -30,7 +31,7 @@ export default function CarDetail() {
         </p>
         <p className="mb-6">{car.description}</p>
         <p className="font-mono text-2xl text-gold font-semibold mb-6">
-          ${car.price_per_day}
+          {siteConfig.currency} {car.price_per_day}
           <span className="text-muted text-sm font-body">/day</span>
         </p>
         <Link

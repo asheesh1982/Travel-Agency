@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { api } from '../../lib/api.js';
+import { siteConfig } from '../../config/site.js';
 
 export default function AdminBookings() {
   const [bookings, setBookings] = useState([]);
@@ -30,7 +31,7 @@ export default function AdminBookings() {
               </p>
             </div>
             <div className="text-right">
-              <p className="font-mono text-gold font-semibold mb-2">${b.total_price}</p>
+              <p className="font-mono text-gold font-semibold mb-2">{siteConfig.currency} {b.total_price}</p>
               <select
                 value={b.status}
                 onChange={(e) => setStatus(b.id, e.target.value)}

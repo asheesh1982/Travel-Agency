@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { api } from '../lib/api.js';
+import { siteConfig } from '../config/site.js';
 
 export default function Account() {
   const [bookings, setBookings] = useState([]);
@@ -38,7 +39,7 @@ export default function Account() {
                 <p className="text-xs mt-1 inline-block px-2 py-0.5 rounded-full bg-gold/15 border border-gold/30 capitalize">{b.status}</p>
               </div>
               <div className="text-right">
-                <p className="font-mono text-gold font-semibold">${b.total_price}</p>
+                <p className="font-mono text-gold font-semibold">{siteConfig.currency} {b.total_price}</p>
                 {b.status === 'confirmed' && (
                   <button onClick={() => cancel(b.id)} className="text-sm text-red-400 mt-2">
                     Cancel

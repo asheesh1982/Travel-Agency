@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { api } from '../../lib/api.js';
+import { siteConfig } from '../../config/site.js';
 
 const empty = {
   name: '',
@@ -94,7 +95,7 @@ export default function AdminCars() {
             <div>
               <p className="font-display">{car.name}</p>
               <p className="text-sm text-muted">
-                {car.category} · {car.seats} seats · ${car.price_per_day}/day · {car.status}
+                {car.category} · {car.seats} seats · {siteConfig.currency} {car.price_per_day}/day · {car.status}
               </p>
             </div>
             <div className="flex gap-3">

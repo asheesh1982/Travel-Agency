@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { api } from '../lib/api.js';
 import { useAuth } from '../context/AuthContext.jsx';
+import { siteConfig } from '../config/site.js';
 
 export default function Booking() {
   const { carId } = useParams();
@@ -50,7 +51,7 @@ export default function Booking() {
       <div className="max-w-lg mx-auto px-4 py-16 text-center">
         <h1 className="font-display text-3xl mb-4">You&apos;re booked!</h1>
         <p className="text-ink/80 mb-6">
-          Total charged (mock payment): <span className="font-mono text-gold">${confirmed.total_price}</span>
+          Total charged (mock payment): <span className="font-mono text-gold">{siteConfig.currency} {confirmed.total_price}</span>
         </p>
         <Link to="/account" className="text-gold font-semibold">
           View my bookings →
@@ -96,8 +97,8 @@ export default function Booking() {
         </div>
         {days > 0 && (
           <p className="text-sm text-muted">
-            {days} day{days > 1 ? 's' : ''} × ${car.price_per_day} ={' '}
-            <span className="font-mono text-gold font-semibold">${total}</span>
+            {days} day{days > 1 ? 's' : ''} × {siteConfig.currency} {car.price_per_day} ={' '}
+            <span className="font-mono text-gold font-semibold">{siteConfig.currency} {total}</span>
           </p>
         )}
         {error && <p className="text-red-400 text-sm">{error}</p>}
