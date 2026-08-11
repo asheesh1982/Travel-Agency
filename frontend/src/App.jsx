@@ -1,6 +1,7 @@
 import { Routes, Route, Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
+import ContactFab from './components/ContactFab.jsx';
 import ProtectedRoute from './components/ProtectedRoute.jsx';
 import AdminRoute from './components/AdminRoute.jsx';
 
@@ -26,6 +27,7 @@ function PublicLayout() {
         <Outlet />
       </div>
       <Footer />
+      <ContactFab />
     </div>
   );
 }

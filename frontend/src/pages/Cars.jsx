@@ -13,6 +13,10 @@ export default function Cars() {
     maxPrice: searchParams.get('maxPrice') || '',
   });
 
+  const from = searchParams.get('from');
+  const to = searchParams.get('to');
+  const tripType = searchParams.get('tripType');
+
   useEffect(() => {
     setLoading(true);
     const params = {};
@@ -31,7 +35,15 @@ export default function Cars() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
-      <h1 className="font-display text-3xl mb-6">Browse cars</h1>
+      <h1 className="font-display text-3xl mb-2">Browse cars</h1>
+      {(from || to) && (
+        <p className="text-sm text-muted mb-6">
+          Showing available cars for your {tripType && <span className="capitalize">{tripType}</span>}
+          {from && <> trip from <span className="text-ink font-medium">{from}</span></>}
+          {to && <> to <span className="text-ink font-medium">{to}</span></>} — pick any car below and set your exact
+          dates on the booking page.
+        </p>
+      )}
       <div className="flex flex-wrap gap-3 mb-8">
         <select
           value={filters.category}
