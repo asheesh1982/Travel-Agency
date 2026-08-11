@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { siteConfig } from '../config/site.js';
 
 export default function CarCard({ car }) {
   return (
@@ -30,7 +31,7 @@ export default function CarCard({ car }) {
           {car.seats} seats · {car.transmission}
         </p>
         <p className="mt-3 font-mono text-gold font-semibold">
-          ${car.price_per_day}
+          {siteConfig.currency} {car.price_per_day}
           <span className="text-muted text-xs font-body">/day</span>
         </p>
       </div>
