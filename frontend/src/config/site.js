@@ -5,8 +5,9 @@
 export const siteConfig = {
   name: 'Shalom Tours and Travels',
   tagline: 'Blessed Departures, Joyful Returns.',
-  phone: import.meta.env.VITE_CONTACT_PHONE || '+1 (555) 010-2030',
-  email: import.meta.env.VITE_CONTACT_EMAIL || 'bookings@shalomtravels.com',
+  phone: import.meta.env.VITE_CONTACT_PHONE || '+91 9019079909',
+  email: import.meta.env.VITE_CONTACT_EMAIL || 'shalomtourandtravel777@gmail.com',
   // Digits only, with country code, no spaces/+/dashes — e.g. 15550102030
-  whatsapp: import.meta.env.VITE_WHATSAPP_NUMBER || '15550102030',
+  whatsapp: import.meta.env.VITE_WHATSAPP_NUMBER || '919019079909',
+  currency: import.meta.env.VITE_CURRENCY || 'Rs.',
 };
