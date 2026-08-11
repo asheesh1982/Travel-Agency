@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1, h2, h3, h4 {
+  font-family: theme('fontFamily.display');
+}
+
+input, select, textarea {
+  background-color: rgba(0, 0, 0, 0.03);
+  color: #2A2416;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #8A8168;
+}
+
+/* Force explicit colors on the dropdown popup itself — some OS/browser
+   dark modes otherwise render it with a dark background, which combined
+   with dark text becomes unreadable. */
+select option {
+  background-color: #FFFBF2;
+  color: #2A2416;
+}
